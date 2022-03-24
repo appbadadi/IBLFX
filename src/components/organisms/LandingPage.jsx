@@ -7,13 +7,16 @@ import {
   LoginIcon,
   PencilAltIcon,
   GlobeAltIcon,
+  WifiIcon,
 } from "@heroicons/react/outline";
 
 const navigation = [
-  { name: "Product", href: "#" },
-  { name: "Features", href: "#" },
-  { name: "Marketplace", href: "#" },
-  { name: "Company", href: "#" },
+  { name: "Home", href: "#" },
+  { name: "What we do", href: "#" },
+  { name: "Insights", href: "#" },
+  { name: "Projetos", href: "#" },
+  { name: "Preços", href: "#" },
+  { name: "DEX", href: "#" },
 ];
 
 const LandingPage = () => {
@@ -26,21 +29,21 @@ const LandingPage = () => {
             <nav className="hidden md:flex space-x-5">
               <a
                 href="#"
-                className="flex text-sm text-white hover:text-gray-900 pr-5"
+                className="flex text-sm text-white hover:text-gray-300 pr-5"
               >
                 <LoginIcon className="w-4 mr-4" />
                 Login
               </a>
               <a
                 href="#"
-                className="flex text-sm text-white hover:text-gray-900 pr-5"
+                className="flex text-sm text-white hover:text-gray-300 pr-5"
               >
                 <PencilAltIcon className="w-4 mr-4" />
                 Registro
               </a>
               <a
                 href="#"
-                className="flex text-sm text-white hover:text-gray-900 pr-5"
+                className="flex text-sm text-white hover:text-gray-300 pr-5"
               >
                 <GlobeAltIcon className="w-4 mr-4" />
                 PT
@@ -63,36 +66,36 @@ const LandingPage = () => {
                     />
                   </a>
                   <div className="-mr-2 flex items-center md:hidden">
-                    <Popover.Button className="bg-gray-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-800 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white">
+                    <Popover.Button
+                      className="bg-gray-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 
+                    hover:bg-gray-800 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white"
+                    >
                       <span className="sr-only">Open main menu</span>
                       <MenuIcon className="h-6 w-6" aria-hidden="true" />
                     </Popover.Button>
                   </div>
                 </div>
-                <div className="hidden space-x-8 md:flex md:ml-10">
+              </div>
+              <div className="hidden md:flex md:items-center md:space-x-6">
+                <div className="hidden space-x-8 md:flex md:mr-5">
                   {navigation.map((item) => (
                     <a
                       key={item.name}
                       href={item.href}
-                      className="text-base font-medium text-white hover:text-gray-300"
+                      className="text-base font-medium text-white hover:text-gray-300 border-r-2 border-white pr-5"
                     >
                       {item.name}
                     </a>
                   ))}
                 </div>
-              </div>
-              <div className="hidden md:flex md:items-center md:space-x-6">
                 <a
                   href="#"
-                  className="text-base font-medium text-white hover:text-gray-300"
+                  className="ml-10 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r 
+                from-pink-600 to-pink-400 bg-origin-border px-4 py-1 border border-transparent rounded-full
+                text-base font-medium text-white"
                 >
-                  Log in
-                </a>
-                <a
-                  href="#"
-                  className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700"
-                >
-                  Start free trial
+                  <WifiIcon className="w-4 mr-4" />
+                  Launch APP
                 </a>
               </div>
             </nav>
@@ -142,7 +145,8 @@ const LandingPage = () => {
                   <div className="mt-6 px-5">
                     <a
                       href="#"
-                      className="block text-center w-full py-3 px-4 rounded-md shadow bg-gradient-to-r from-teal-500 to-cyan-600 text-white font-medium hover:from-teal-600 hover:to-cyan-700"
+                      className="block text-center w-full py-3 px-4 rounded-md shadow bg-gradient-to-r from-teal-500 to-cyan-600
+                       text-white font-medium hover:from-teal-600 hover:to-cyan-700"
                     >
                       Start free trial
                     </a>
@@ -166,44 +170,104 @@ const LandingPage = () => {
               <div className="lg:grid lg:grid-cols-2 lg:gap-8">
                 <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
                   <div className="lg:py-24">
-                    <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
-                      <span className="block">A better way to</span>
-                      <span className="pb-3 block bg-clip-text text-transparent bg-gradient-to-r from-teal-200 to-cyan-400 sm:pb-5">
-                        ship web apps
+                    <h1 className="mt-4 text-4xl tracking-tight font-bold text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-8xl">
+                      <span className="block bg-clip-text text-transparent bg-orange-600">
+                        Permissioned
                       </span>
+                      <span className="pb-3 block sm:pb-5">Digital Assets</span>
                     </h1>
-                    <p className="text-base text-gray-300 sm:text-xl lg:text-lg xl:text-xl">
-                      Anim aute id magna aliqua ad ad non deserunt sunt. Qui
-                      irure qui Lorem cupidatat commodo. Elit sunt amet fugiat
-                      veniam occaecat fugiat.
+                    <p className="mt-4 text-4xl tracking-tight font-bold text-white sm:mt-1 sm:text-3xl xl:text-4xl">
+                      Uma comunidade feita por e para{" "}
+                      <span className="text-orange-600">Market Makers</span>
                     </p>
-                    <div className="mt-10 sm:mt-12">
-                      <form
-                        action="#"
-                        className="sm:max-w-xl sm:mx-auto lg:mx-0"
-                      >
-                        <div className="sm:flex">
-                          <div className="mt-3 sm:mt-0">
-                            <button
-                              type="submit"
-                              className="block w-full py-3 px-4 rounded-md shadow bg-gradient-to-r from-teal-500 to-cyan-600 text-white font-medium hover:from-teal-600 hover:to-cyan-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-400 focus:ring-offset-gray-900"
-                            >
-                              Start free trial
-                            </button>
-                          </div>
+                    <p className="text-base text-white sm:text-xl lg:text-lg xl:text-xl">
+                      Aproveite de todos os beneficios dos ativos digitais de
+                      forma segura e controlada, com alto ganho e menos riscos.
+                    </p>
+                    <div className="mt-10 sm:mt-5">
+                      <div className="sm:flex">
+                        <div className="mt-3 sm:mt-0">
+                          <button
+                            type="submit"
+                            className="whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r 
+                              from-pink-600 to-pink-400 bg-origin-border px-12 py-1 border border-transparent rounded-full
+                              text-base text-white"
+                          >
+                            Cadastre-se
+                          </button>
                         </div>
-                      </form>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div className="mt-12 -mb-16 sm:-mb-48 lg:m-0 lg:relative">
-                  <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
-                    {/* Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ */}
-                    <img
-                      className="w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-                      src="https://tailwindui.com/img/component-images/cloud-illustration-teal-cyan.svg"
-                      alt=""
-                    />
+
+                <div className="mt-12 -mb-16 sm:-mb-0 lg:m-0 lg:relative">
+                  <div className="lg:py-10 lg:px-20">
+                    <h1 className="flex justify-center mt-4 text-4xl tracking-tight text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-4xl">
+                      <span className="font-bold">
+                        IBLF
+                        <span className="bg-clip-text text-transparent bg-orange-600 font-bold">
+                          x
+                        </span>
+                      </span>
+                      <span className="pb-3 block sm:pb-5 sm:pl-3 italic">
+                        Tokens
+                      </span>
+                    </h1>
+                    <div className="bg-black rounded-xl px-10 py-4 bg-opacity-50">
+                      <p className="text-base text-white sm:text-xl lg:text-lg xl:text-xl">
+                        Os tokens IBLFx garantem diversos beneficios para os
+                        seus stakers. De AirDrops a possibilidade de criar sua
+                        propria Pool.
+                      </p>
+                      <p className="mt-4 text-4xl tracking-tight font-bold text-white sm:mt-2 sm:text-3xl xl:text-xl">
+                        Quanto mais tokens,{" "}
+                        <span className="text-orange-600">mais vantagens!</span>
+                      </p>
+                      <div className="text-orange-600 text-center pt-4">
+                        <div className="flex border-b-2 border-orange-600">
+                          <WifiIcon className="w-16 p-2 border-r-2 border-orange-600" />
+                          <p className="px-6 py-2 border-r-2 border-orange-600">
+                            <span className="block">300.000</span> Staked
+                          </p>
+                          <p className="pl-16 pt-5">Airdrops</p>
+                        </div>
+                        <div className="flex border-b-2 border-orange-600">
+                          <WifiIcon className="w-16 p-2 border-r-2 border-orange-600" />
+                          <p className="px-6 py-6 border-r-2 border-orange-600">
+                            <span className="block text-sm">1.000.000</span>{" "}
+                            Staked
+                          </p>
+                          <p className="pl-8 pt-2">
+                            <span className="block">Airdrops</span>{" "}
+                            <span className="block">+</span> Access to Private
+                          </p>
+                        </div>
+                        <div className="flex">
+                          <WifiIcon className="w-16 p-2 border-r-2 border-orange-600" />
+                          <p className="px-5 py-10 border-r-2 border-orange-600">
+                            <span className="block text-sm">+1.000.000</span>{" "}
+                            Staked
+                          </p>
+                          <p className="pl-4 py-2">
+                            <span className="block">Airdrops</span>{" "}
+                            <span className="block">+</span> Access to Private
+                            <span className="block">+</span> Create Liquidity
+                            Pools
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="sm:flex sm:justify-center mt-10 sm:mt-5">
+                      <button
+                        type="submit"
+                        className="whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r 
+                              from-pink-600 to-pink-400 bg-origin-border px-12 py-1 border border-transparent rounded-full
+                              text-base text-white"
+                      >
+                        Compre Agora!
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
